@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lock Users</title>
+</head>
+<body>
+    <h1>Lock Users for Teacher</h1>
+    <h2>Teacher ID: {{ teacher_id }}</h2>
+    <form action="{{ url_for('lock_users') }}" method="post">
+        <select name="class_id">
+            {% for class in teacher_classes %}
+                <option value="{{ class['class_id'] }}">{{ class['class_name'] }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Lock Users</button>
+    </form>
+</body>
+</html>

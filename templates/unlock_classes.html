@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lock Classes</title>
+</head>
+<body>
+    <h1>Lock Classes</h1>
+    <form method="POST">
+        <label for="teacher">Select Teacher:</label>
+        <select name="teacher" id="teacher">
+            {% for teacher in teachers %}
+                <option value="{{ teacher[0] }}">{{ teacher[1] }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <label for="class">Select Class:</label>
+        <select name="class" id="class">
+            {% for class_name in classes %}
+                <option value="{{ class_name }}">{{ class_name }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <button type="submit">Lock Class</button>
+    </form>
+</body>
+</html>
