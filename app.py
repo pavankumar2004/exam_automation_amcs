@@ -4,13 +4,13 @@ import mysql.connector
 import subprocess
 from threading import Thread
 app = Flask(__name__)
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'  # Gmail SMTP server address
+app.config['MAIL_SERVER'] = ''  # Gmail SMTP server address
 app.config['MAIL_PORT'] = 587  # Port for Gmail SMTP server (587 for TLS)
-app.config['MAIL_USERNAME'] = 'pk6122004@gmail.com'  # Your Gmail address
-app.config['MAIL_PASSWORD'] = 'vvao wzzh zqmf jeam'  # Your Gmail password
+app.config['MAIL_USERNAME'] = ''  # Your Gmail address
+app.config['MAIL_PASSWORD'] = ''  # Your Gmail password
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USE_SSL'] = False
-app.config['MAIL_DEFAULT_SENDER'] = 'pk6122004@gmail.com'
+app.config['MAIL_DEFAULT_SENDER'] = ''
 app.secret_key = 'your_secret_key'
 mail = Mail(app)
 USERNAME = 'admin'
